@@ -5,12 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Aïda Sarr | Développeuse Web</title>
+    <meta name="description" content="Aïda Sarr, développeuse web front-end junior formée chez SUNU CODE. Découvrez mes projets et contactez-moi.">
+
+    <!-- Aperçu lors du partage sur WhatsApp, Facebook, LinkedIn... -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aidasarr7a-dev.github.io/portfolio/">
+    <meta property="og:title" content="Aïda Sarr | Développeuse Web">
+    <meta property="og:description" content="Développeuse web front-end junior formée chez SUNU CODE. Découvrez mes projets et contactez-moi.">
+    <meta property="og:image" content="https://aidasarr7a-dev.github.io/portfolio/images/photo-aida.jpg">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" href="images/photo-aida.jpg">
 
     <link rel="stylesheet" href="style.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
@@ -72,20 +84,19 @@
 
         <div class="about">
 
-            <div class="about-image">
-                <div class="profile-circle">
-                    <i class="fa-solid fa-user"></i>
-                </div>
-            </div>
+            <ul class="about-facts">
+                <li><strong>5 mois</strong><span>de formation chez SUNU CODE</span></li>
+                <li><strong>3</strong><span>projets réalisés</span></li>
+                <li><strong>Sénégal</strong><span>disponible à distance</span></li>
+            </ul>
 
             <div class="about-text">
 
                 <h3>Qui suis-je ?</h3>
 
                 <p>
-                    Je suis <strong>Aïda Sarr</strong>, actuellement en
-                    formation dans le développement web avec une
-                    orientation Front-End.
+                    Je suis <strong>Aïda Sarr</strong>, développeuse web
+                    formée chez SUNU CODE, avec une orientation Front-End.
                 </p>
 
                 <p>
@@ -126,7 +137,7 @@
             <div class="skill-card">
                 <i class="fa-solid fa-code"></i>
                 <h3>Front-End</h3>
-                <p>HTML • CSS • Bootstrap</p>
+                <p>HTML • CSS • Bootstrap • JavaScript</p>
             </div>
 
             <div class="skill-card">
@@ -142,9 +153,9 @@
             </div>
 
             <div class="skill-card">
-                <i class="fa-solid fa-lightbulb"></i>
-                <h3>Qualités</h3>
-                <p>Créativité • Organisation • Adaptabilité</p>
+                <i class="fa-brands fa-github"></i>
+                <h3>Outils</h3>
+                <p>Git • GitHub</p>
             </div>
 
         </div>
@@ -164,8 +175,8 @@
 
             <div class="project-card">
 
-                <div class="project-icon">
-                    <i class="fa-solid fa-shop"></i>
+                <div class="project-icon project-image">
+                    <img src="images/projet-hawa-aicha.jpg" alt="Page d'accueil du site Hawa Aïcha Boutique">
                 </div>
 
                 <div class="project-content">
@@ -175,9 +186,11 @@
                     <span>Projet e-commerce</span>
 
                     <p>
-                        Projet de site web pour une boutique proposant
-                        des parfums, cosmétiques, sacs, chaussures,
-                        jàlabas et autres produits.
+                        Projet de fin de formation : une plateforme
+                        e-commerce complète pour une boutique de parfums,
+                        cosmétiques, sacs, chaussures, jàlabas et autres
+                        produits, avec panier, espace client et
+                        administration.
                     </p>
 
                     <div class="tags">
@@ -187,6 +200,10 @@
                         <span>PHP</span>
                         <span>MySQL</span>
                     </div>
+
+                    <a class="project-link" href="https://github.com/aidasarr7a-dev/hawa-aicha-boutique" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-github"></i> Voir le code
+                    </a>
 
                 </div>
 
@@ -272,11 +289,12 @@
                 </div>
 
                 <div>
-                    <h3>Développement Web</h3>
-                    <p class="date">Formation en cours</p>
+                    <h3>Développement Web — SUNU CODE</h3>
+                    <p class="date">Formation de 5 mois</p>
                     <p>
-                        Formation orientée vers le développement
-                        Front-End et la création de sites web.
+                        HTML, CSS, Bootstrap, JavaScript, PHP, MySQL,
+                        Git et GitHub. Projet de fin de formation :
+                        Hawa Aïcha Boutique.
                     </p>
                 </div>
 
@@ -365,15 +383,15 @@
                     à une solution adaptée à vos besoins.
                 </p>
 
-                <div class="contact-item">
+                <a class="contact-item" href="mailto:aidasarr7.a@gmail.com">
                     <i class="fa-solid fa-envelope"></i>
                     <span>aidasarr7.a@gmail.com</span>
-                </div>
+                </a>
 
-                <div class="contact-item">
+                <a class="contact-item" href="tel:+221785452544">
                     <i class="fa-solid fa-phone"></i>
                     <span>+221 78 545 25 44</span>
-                </div>
+                </a>
 
                 <div class="contact-item">
                     <i class="fa-solid fa-location-dot"></i>
@@ -383,20 +401,23 @@
             </div>
 
 
-            <form class="contact-form">
+            <div class="contact-actions">
 
-                <input type="text" placeholder="Votre nom">
+                <h3>Écrivez-moi directement</h3>
 
-                <input type="email" placeholder="Votre email">
+                <a class="btn btn-whatsapp" href="https://wa.me/221785452544?text=Bonjour%20A%C3%AFda%2C%20j%27ai%20vu%20votre%20portfolio%20et%20" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-whatsapp"></i> Discuter sur WhatsApp
+                </a>
 
-                <textarea rows="6"
-                          placeholder="Votre message"></textarea>
+                <a class="btn btn-outline" href="mailto:aidasarr7.a@gmail.com?subject=Contact%20depuis%20votre%20portfolio">
+                    <i class="fa-solid fa-envelope"></i> Envoyer un email
+                </a>
 
-                <button type="submit" class="btn">
-                    Envoyer le message
-                </button>
+                <a class="btn btn-outline" href="https://www.linkedin.com/in/a%C3%AFda-sarr-557854381" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-linkedin-in"></i> Me suivre sur LinkedIn
+                </a>
 
-            </form>
+            </div>
 
         </div>
 
