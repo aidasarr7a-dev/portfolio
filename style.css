@@ -155,9 +155,18 @@ header {
     align-items: center;
 }
 
-.hero-icon i {
-    font-size: 120px;
-    color: #d63384;
+.hero-icon {
+    flex-shrink: 0;
+    overflow: hidden;
+    border: 6px solid #fff;
+    box-shadow: 0 0 0 4px #d63384, 0 20px 40px rgba(214, 51, 132, 0.25);
+}
+
+.hero-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
 }
 
 
@@ -526,10 +535,6 @@ footer {
     .hero-icon {
         width: 220px;
         height: 220px;
-    }
-
-    .hero-icon i {
-        font-size: 80px;
     }
 
     .about {
