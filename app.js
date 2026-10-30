@@ -3,70 +3,70 @@
 // =========================
 
 const navLinks = document.querySelector(".nav-links");
+const menuButton = document.querySelector(".menu-button");
+const menuIcon = menuButton.querySelector("i");
 
-const menuButton = document.createElement("button");
-
-menuButton.innerHTML = "☰";
-menuButton.classList.add("menu-button");
-
-document.querySelector(".navbar").prepend(menuButton);
+function fermerMenu() {
+    navLinks.classList.remove("active");
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "Ouvrir le menu");
+    menuIcon.className = "fa-solid fa-bars";
+}
 
 menuButton.addEventListener("click", function () {
-    navLinks.classList.toggle("active");
+
+    const ouvert = navLinks.classList.toggle("active");
+
+    menuButton.setAttribute("aria-expanded", ouvert);
+    menuButton.setAttribute("aria-label", ouvert ? "Fermer le menu" : "Ouvrir le menu");
+    menuIcon.className = ouvert ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+
 });
 
 
 // Fermer le menu après avoir cliqué sur un lien
 
 document.querySelectorAll(".nav-links a").forEach(function (link) {
+    link.addEventListener("click", fermerMenu);
+});
 
-    link.addEventListener("click", function () {
-        navLinks.classList.remove("active");
-    });
 
+// Fermer le menu avec la touche Échap
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+        fermerMenu();
+    }
 });
 
 
 // =========================
-// FORMULAIRE DE CONTACT
+// LIEN ACTIF DANS LE MENU
 // =========================
 
-const form = document.querySelector(".contact-form");
-
-form.addEventListener("submit", function (event) {
-
-    event.preventDefault();
-
-    alert("Merci pour votre message ! Je vous répondrai bientôt.");
-
-    form.reset();
-
-});
-
-
-// =========================
-// ANIMATION AU DÉFILEMENT
-// =========================
-
-const elements = document.querySelectorAll(
-    ".skill-card, .project-card, .timeline-item"
-);
+const sections = document.querySelectorAll("section[id]");
 
 const observer = new IntersectionObserver(function (entries) {
 
     entries.forEach(function (entry) {
 
         if (entry.isIntersecting) {
-            entry.target.classList.add("show");
+
+            document.querySelectorAll(".nav-links a").forEach(function (link) {
+                link.classList.toggle(
+                    "active",
+                    link.getAttribute("href") === "#" + entry.target.id
+                );
+            });
+
         }
 
     });
 
 }, {
-    threshold: 0.15
+    rootMargin: "-45% 0px -50% 0px"
 });
 
-
-elements.forEach(function (element) {
-    observer.observe(element);
+sections.forEach(function (section) {
+    observer.observe(section);
 });

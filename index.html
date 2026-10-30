@@ -32,7 +32,11 @@
         <nav class="navbar">
             <a href="#accueil" class="logo">Aïda<span>.</span></a>
 
-            <ul class="nav-links">
+            <button class="menu-button" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="menu">
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#apropos">À propos</a></li>
                 <li><a href="#competences">Compétences</a></li>
@@ -85,8 +89,8 @@
         <div class="about">
 
             <ul class="about-facts">
-                <li><strong>5 mois</strong><span>de formation chez SUNU CODE</span></li>
-                <li><strong>3</strong><span>projets réalisés</span></li>
+                <li><strong>SUNU CODE</strong><span>formation en développement web</span></li>
+                <li><strong>Front-End</strong><span>ma spécialité</span></li>
                 <li><strong>Sénégal</strong><span>disponible à distance</span></li>
             </ul>
 
@@ -173,7 +177,7 @@
 
         <div class="projects">
 
-            <div class="project-card">
+            <div class="project-card project-featured">
 
                 <div class="project-icon project-image">
                     <img src="images/projet-hawa-aicha.jpg" alt="Page d'accueil du site Hawa Aïcha Boutique">
@@ -290,7 +294,7 @@
 
                 <div>
                     <h3>Développement Web — SUNU CODE</h3>
-                    <p class="date">Formation de 5 mois</p>
+                    <p class="date">Formation en développement web</p>
                     <p>
                         HTML, CSS, Bootstrap, JavaScript, PHP, MySQL,
                         Git et GitHub. Projet de fin de formation :
@@ -448,6 +452,8 @@
         </p>
 
     </footer>
+
+    <script src="app.js"></script>
 
 </body>
 </html>
